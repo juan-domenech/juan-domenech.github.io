@@ -6,12 +6,8 @@ Credits to [https://davidwalsh.name/css-cube](https://davidwalsh.name/css-cube)
 
 ### Rotating cube with logo
 
-```html
-index.html
-```
+http://juan-domenech.github.io/sandbox/rotating-cube/code-institute-logo.html
 
 ### Rotating Rubik cube
 
-```html
-rubik.html
-```
+http://juan-domenech.github.io/sandbox/rotating-cube/rubik.html
