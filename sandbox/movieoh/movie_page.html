@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MovieOh!</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<style type="text/css">
+
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    #des {
+			font-size: 70%;
+    }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    #des {
+			font-size: 75%;
+    }
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    #des {
+			font-size: 80%;
+    }
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    #des {
+			font-size: 90%;
+    }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    #des {
+			font-size: 100%;
+    }
+}
+
+	.glyphicon {
+    font-size: 50px;
+    transition:transform 0.2s ease-out, color 0.3s ease-out;
+	}
+	.glyphicon:hover {
+    transform: scale(1.2, 1.2);
+	}
+	.glyphicon-star-empty {
+		font-size: 20px;
+	}
+	.glyphicon-star {
+		font-size: 20px;
+	}
+	.glyphicon-cog:hover{
+		transform: rotate(45deg) scale(1.2, 1.2);
+	}
+	strong{
+		font-size: 25px;
+	}
+	.btn-danger.outline{
+		border:20px;
+	}
+	button:hover{
+		transform: scale(1.2, 1.2);
+		transition:transform 0.1s ease-out, color 0.3s ease-out;
+	}
+	#footer{
+		border-style: solid;
+		border-width: 2px;
+		border-radius: 30px;
+		border-color: #0ce3ac;
+	}
+	iframe{
+		border-style: solid;
+		border-width: 2px;
+		border-radius: 2px;
+		border-color: #0ce3ac;
+	}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+	<!-- First row with Logo -->
+	<div class="row">
+		<div class="col-sm-9">
+				<a href="index.html"><img src="img/bad-logo.png" width="350px"></a>
+		</div>
+		<div class="col-xs-2 col-sm-1">
+				<a href="index.html"><span class="glyphicon glyphicon-film"></span></a>
+		</div>
+		<div class="col-xs-2 col-sm-1">
+				<a href="settings.html"><span class="glyphicon glyphicon-cog"></span></a>
+		</div>
+	</div>
+  <!-- Second row with buttos to Love&Hate and Title-->
+	<div class="row">
+		<div class="col-sm-3">
+				<span class="glyphicon glyphicon-heart" style="color:green"></span>
+				<span class="glyphicon glyphicon-remove" style="color:red"></span>
+		</div>
+		<div class="col-sm-7">
+		<h1> Deadpool (2016)</h1>
+		</div>
+	</div>
+  <!-- Third row with Movie trailer and movie details-->
+	<div class="row">
+		<div class="col-sm-8" id="trailer">
+			<!-- 16:9 aspect ratio -->
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OcAlu4S-BvI"></iframe>
+			</div>
+			<font size="6"><br><p>Excellent! You can watch this movie <font color="#0ce3ac">Now!</font></p></font>
+		</div>
+		<div class="col-sm-4" id="des">
+			<img style="margin-right: 0px; margin-top: 0px; margin-bottom: 0px; padding: 10px;" class="img-responsive" src="img/movie.jpg" align="left" width="40%">
+			<p>A former Special Forces operative turned mercenary is subjected to a rogue experiment that leaves him with accelerated healing powers, adopting the alter ego Deadpool. It looks like Fox is confident that it has a hit on its hands with Deadpool, as The Hollywood Reporter has revealed that the studio has tapped screenwriters Rhett Reese and Paul Wernick to start working on a script... | <a href="">Expand </a></p>
+			<p>Director: Tim Miller</p>
+			<p>Writers: Rob Liefeld (character), Fabian Nicieza (character) | <a href="">2 more credits »</a></p>
+			<p>Stars: Ryan Reynolds, Morena Baccarin, T.J. Miller | <a href="">See full cast & crew »</a></p>
+			</p>
+		</div>
+	</div>
+  <!-- Fourth row: Where to watch it now and what people are saying about it -->
+	<div class="row">
+		<div class="col-xs-2 col-sm-2">
+			<button type="button" class="btn btn-danger">
+			  <strong>$2.00</strong><img class="img-responsive" src="http://www.bitterwallet.com/wp-content/uploads/2014/04/netflix-transparent.png" width="150px">
+			</button>
+		</div>
+		<div class="col-xs-2 col-sm-2">
+			<button type="button" class="btn btn-danger">
+			  <strong>$1.99</strong></span>  <img class="img-responsive" src="http://4.bp.blogspot.com/-DV3oSkBGKVw/VWdWwTZ0DSI/AAAAAAAABrs/KizNkOcUhGw/s1600/Google%2BPlay%2Blogo.png" width="150px">
+			</button>
+		</div>
+		<div class="col-xs-2 col-sm-2">
+			<button type="button" class="btn btn-danger">
+			  <strong>$0.99</strong></span>  <img class="img-responsive" src="https://lh3.ggpht.com/kOJmm-GVhAVJ50A_gY59EmaOvlwoseWFWgNmr75ufVVLZSlpBdV2jWqHPiiBfzOO6bTY=w300" width="150px">
+			</button>
+		</div>
+		<div class="col-xs-2 col-sm-2">
+			<button type="button" class="btn btn-primary">
+			  <strong>Free! </strong><img class="img-responsive" src="https://lh6.ggpht.com/2c8BQojorDvdhl-Vgn8H_KzKwV3-SW4mMtaOxsTY2zmLwAayGqDEfo-nTkCFJVWbXNU=w300" width="150px">
+			</button>
+</div>
+
+<div class="col-xs-8 col-sm-4">
+	<div class="list-group">
+  	<a href="#" class="list-group-item active">What people are saying?</a>
+		<font size="4">
+  	<a href="http://www.imdb.com/title/tt1431045/reviews?ref_=tt_ov_rt" class="list-group-item">IMDB
+  		<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>
+  	</a>
+
+  	<a href="http://www.rottentomatoes.com/m/deadpool/#contentReviews" class="list-group-item">Rotten Tomatoes <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>
+  	</a>
+
+  	<a href="http://www.metacritic.com/movie/deadpool/critic-reviews" class="list-group-item">Metascore <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>
+  	</a>
+
+  	<a href="#" class="list-group-item">movieOh! <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>
+  	</a>
+  	</font>
+	</div>
+</div>
+</div>
+
+<!-- Last row: -->
+<div class="row">
+	<div class="col-sm-8" id="footer">
+		<img class="img-responsive" src="http://www.tastebudsri.com/images/taste-bud-guy.png" width="80" align="left">
+		<font size="4">
+		<br>
+		<p>Not a subscriber of any of these video stores?</p><p> No worries! <a href="">Click here to subscribe</a> and don't forget to use our promotion code MOVIEOH2016 to get a 50% disccount!</p>
+		</font>
+	</div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MovieOh!</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
+
+<style type="text/css">
+#cont{
+	width:100%;
+	max-width:1100px;
+	margin:0 auto;
+}
+.logo{
+	width:100%;
+	height:auto;
+}
+
+.dvd:hover .dvd_icons{
+	opacity:1;
+}
+
+.dvd:hover img{
+	transition: all 0.2s ease-out;
+	-webkit-filter:brightness(0.5);
+	filter:brightness(0.5);
+}
+
+.results img, .recomm img{
+	width:100%;
+	height:auto;
+}
+
+.dvd{
+	margin-bottom:20px;
+}
+
+.dvd_icons{
+	opacity:0;
+	position: absolute;
+    bottom: 0;
+    transition:opacity 0.3s ease-out;
+    text-align:center;
+    width:100%;
+}
+
+.dvd i{
+	font-size:40px;
+	transition:transform 0.2s ease-out;
+	color:white;
+	opacity:0.6;
+}
+
+.dvd i:hover{
+	transform:scale(1.15);
+	opacity:1;
+}
+
+.col2{
+	padding-top:40px;
+}
+.dropdown{
+	width:100%;
+}
+
+.dvd a{
+	display:block;
+	position:relative;
+}
+.dvd_icons .glyphicon-play-circle{
+	font-size:100px;
+	opacity:1;
+}
+
+.dvd_icons .glyphicon-play-circle:hover{
+	transform:scale(1);
+}
+.right{
+	float:right;
+}
+i.glyphicon-cog{
+	font-size:50px;
+	color:gray;
+	transition:transform 0.2s ease-out, color 0.3s ease-out;
+}
+
+i.glyphicon-cog:hover{
+	transform:rotate(45deg);
+	color:white;
+}
+
+.form-group{
+	margin-top:20px;
+}
+
+form input{
+	margin-bottom: 10px;
+}
+
+
+@media (min-width: 1100px) and (max-width:1300px){
+	#sidebar{
+		position:fixed;
+		width:30%;
+	}
+	#col2nd{
+		margin-left: 34%;
+	}
+}
+
+@media (min-width: 1300px){
+	#sidebar{
+		position:fixed;
+		width:30%;
+	}
+	#col2nd{
+		margin-left: 39%;
+	}
+}
+
+
+
+</style>
+
+</head>
+<body>
+<div id="cont">
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 col-xs-12" id="sidebar">
+			<img class="logo" src="img/bad-logo.png" height="108" width="424">
+			<form id="form">
+			  <div class="form-group">
+				<input type="text" class="form-control" id="keywords" placeholder="Title">
+				<input type="text" class="form-control" id="keywords" placeholder="Actors">
+				<input type="text" class="form-control" id="keywords" placeholder="Director">
+				<input type="text" class="form-control" id="keywords" placeholder="Year">
+			    
+			    
+			    <div class="dropdown">
+			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    Genre
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			    <li><a href="#">Action</a></li>
+			    <li><a href="#">Adventure</a></li>
+			    <li><a href="#">Comedy</a></li>
+			    <li><a href="#">Fantasy</a></li>
+			    <li><a href="#">Dark</a></li>
+			    <li><a href="#">Romantic</a></li>
+			    <li><a href="#">Horror</a></li>
+			    <li><a href="#">Crime</a></li>
+			    <li><a href="#">Thriller</a></li>
+			    <li><a href="#">Documentary</a></li>
+			    <li><a href="#">Animation</a></li>
+			  </ul>
+			</div>
+		</div>
+			  
+			  
+			  <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i> Search</button>
+</form>
+
+
+
+
+
+
+
+
+		</div>
+		<div class="col2 col-md-8 col-xs-12" id="col2nd">
+			<div class="row">
+			<div class="right"><a href="settings.html"><i class="glyphicon glyphicon-cog"></i></a></div><h3>Results</h3>
+			</div>
+			<div class="row results">
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/arrow.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/badeducation.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/barbie.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/movie.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/blood.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/daisy.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/darkweb.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/daysofg.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/dirty-grandpa.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/exmachina.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/galaxy.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/gothika.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/hateful8.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/inception.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/joy.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/krampus.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/ladyinvan.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/legend.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/nonstop.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/triple9.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					
+			</div><!--results row-->
+
+			<div class="row recomm">
+			<h4><em>You may also like these...<em></h4>
+										<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/revenant.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/swordfish.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/trainwreck.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6 dvd">
+						<a href="movie_page.html">
+							<img src="img/wedding.jpg" height="470" width="320">
+							<div class="dvd_icons">
+								<i class="glyphicon glyphicon-play-circle"></i><br><br>
+								<i class="glyphicon glyphicon-heart" title="I Love this"></i>
+								<i class="glyphicon glyphicon-remove" title="I Hate this"></i>
+								<i class="glyphicon glyphicon-eye-open" title="Watch Later"></i>
+							</div>
+						</a>
+					</div>
+			</div><!--recomm-->
+		</div>
+	</div>
+</div>
+
+
+
+
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+
+
+</script>
+</body>
+</html>
+

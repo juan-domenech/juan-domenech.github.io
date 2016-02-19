@@ -1,0 +1,218 @@
+img.thumbnail:hover:after{
+	content:"\e014";
+	font-family: 'Glyphicons Halflings';
+	font-size:30px;
+	color:white;
+}
+
+
+#cont{
+	width:100%;
+	max-width:1100px;
+	margin:0 auto;
+}
+#settings_page #cont{
+	max-width:1200px;
+}
+.logo{
+	width:100%;
+	height:auto;
+}
+
+.dvd:hover .dvd_icons{
+	opacity:1;
+}
+
+.dvd:hover img{
+	transition: all 0.2s ease-out;
+	-webkit-filter:brightness(0.5);
+	filter:brightness(0.5);
+}
+
+.results img, .recomm img{
+	width:100%;
+	height:auto;
+}
+
+.dvd{
+	margin-bottom:20px;
+}
+
+.dvd_icons{
+	opacity:0;
+	position: absolute;
+    bottom: 0;
+    transition:opacity 0.3s ease-out;
+    text-align:center;
+    width:100%;
+}
+
+.dvd i{
+	font-size:40px;
+	transition:transform 0.2s ease-out;
+	color:white;
+	opacity:0.6;
+}
+
+.dvd i:hover{
+	transform:scale(1.15);
+	opacity:1;
+}
+
+.col2{
+	padding-top:40px;
+}
+.dropdown{
+	width:100%;
+}
+
+.dvd a{
+	display:block;
+	position:relative;
+}
+.dvd_icons .glyphicon-play-circle{
+	font-size:100px;
+	opacity:1;
+}
+
+.dvd_icons .glyphicon-play-circle:hover{
+	transform:scale(1);
+}
+.right{
+	float:right;
+}
+i.glyphicon-cog{
+	font-size:50px;
+	color:gray;
+	transition:transform 0.2s ease-out, color 0.3s ease-out;
+}
+
+i.glyphicon-cog:hover{
+	transform:rotate(45deg);
+	color:white;
+}
+
+.form-group{
+	margin-top:20px;
+}
+
+form input{
+	margin-bottom: 10px;
+}
+
+
+@media (min-width: 1100px) and (max-width:1300px){
+	#sidebar{
+		position:fixed;
+		width:30%;
+	}
+	#col2nd{
+		margin-left: 34%;
+	}
+}
+
+@media (min-width: 1300px){
+	 #sidebar{
+		position:fixed;
+		width:30%;
+	}
+	#col2nd{
+		margin-left: 39%;
+	}
+}
+
+@media (min-width: 1100px) and (max-width:1300px){
+	#settings_page #sidebar{
+		position:fixed;
+		width:18%;
+	}
+	#settings_page #col2nd{
+		margin-left: 18%;
+	}
+}
+
+@media (min-width: 1300px){
+	#settings_page #sidebar{
+		position:fixed;
+		width:18%;
+	}
+	#settings_page #col2nd{
+		margin-left: 24%;
+	}
+}
+
+
+.horizontal-slide li {
+    transition: transform 0.2s ease-out;
+    cursor:pointer;
+}
+
+.horizontal-slide li:hover {
+    transform: translateX(-20px);
+}
+
+img.thumbnail{
+	transition-property: filter, -webkit-filter;
+	transition-duration:0.2s;
+	transition-timing-function:ease-out;
+}
+
+
+.horizontal-slide li:hover:before{
+	content: "×";
+	font-family: "Glyphicons Halflings";
+	color:white;
+	font-size:40px;
+	position:absolute;
+	top:0;
+	left:25px;
+	z-index:10000;
+	transform:scale(1);
+}
+
+.horizontal-slide li:before{
+	transform:scale(0);
+	transition: transform 2s ease-out;
+}
+
+.horizontal-slide li:hover img{
+	-webkit-filter:brightness(0.6);
+	filter:brightness(0.6);
+}
+
+#settings_page h1{
+	font-size:32px;
+	padding-top:30px;
+	float:left;
+}
+
+.glyphicon-plus-sign{
+	color:white;
+	display:block;
+	margin-top:50px;
+	margin-right:10px;
+	cursor:pointer;
+}
+
+input.searchbox{
+	display:block;
+	clear:both;
+	width:100%;
+	font-size:20px;
+	border-radius:50px;
+	max-height:0px;
+	opacity:0;
+	transition-property:opacity, max-height, padding;
+	transition-duration:0.2s;
+	margin-bottom: 10px;
+}
+
+.glyphicon-plus-sign:hover ~ input.searchbox, input.searchbox:hover{
+	max-height:100px;
+	padding:10px;
+	opacity:1;
+}
+.glyphicon.glyphicon-film{
+	font-size:50px;
+	color:gray;
+}
