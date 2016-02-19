@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Spotify API jQuery sandbox</title>
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+</head>
+<body>
+
+    <h1 id='top-h1'>Spotify API jQuery sandbox</h1>
+
+    <form>
+        <input>
+        <button>search your favourite artist!</button>
+    </form>
+
+    <h2 id='top-h2'></h2>
+
+    <select id='artist-list'>
+    </select>
+
+    <h3 id='top-h3'></h3>
+
+    <select id='album-list'>
+    </select>
+
+    <img align='middle' src=''>
+
+    <h4 id='top-h4'></h4>
+
+    <select id='track-list'>
+    </select>
+
+    <h5 id='top-h5'></h5>
+
+    <iframe src='' width='300' height='80'></iframe>
+
+<script>
+
+//
+//Challenge. Spotify API
+//Create an app that:
+//Allow us to search for an artist
+//It should show a list of artists found
+//When clicking an album it should show a list of albums
+//When clicking an album it should show a list of tracks
+//When clicking a track it should reproduce a preview of the song (30'')
+//Hints:
+//https://developer.spotify.com/web-api/search-item/
+//https://developer.spotify.com/web-api/console/get-search-item/?q=tania+bowra&type=artist#complete
+//https://api.spotify.com
+//
+
+var spotifyURL = 'https://api.spotify.com/v1/'
+
+// Hide unnecessary fields
+function hideFields(){
+
+    $('#top-h3').hide()
+    $('#top-h4').hide()
+    $('#top-h5').hide()
+    $('#album-list').hide()
+    $('#track-list').hide()
+    $('iframe').attr("src","");
+    $('iframe').hide()
+    $('img').hide()
+
+}
+
+// Hide unnecessary fields (+some extra)
+$('#top-h2').hide()
+$('select').hide()
+hideFields();
+
+
+// We are going to need this function a couple of times...
+function renderAlbums ( artistID ){
+
+    hideFields();
+
+    // Albums
+    $.ajax({
+        url: spotifyURL+'artists/'+artistID+'/albums',
+        dataType: "json",
+        success: function( response ) {
+
+            $('#top-h3').html('Albums: ('+response.items.length+')')
+            $('#top-h3').show()
+
+            var numResponses = response.items.length;
+            var listResponses ='<option>Select album...</option>';
+
+            // Storing the Album ID and the Album Thumbnail URL into the Options menu (besides the Album name)
+            for (var i=0; i<numResponses; i++) {
+            listResponses += "<option value='"+response.items[i].id+"' data-url='"+response.items[i].images[2].url+"'>"+response.items[i].name+"</option>"
+            }
+            $("#album-list").html(listResponses)
+            $('#album-list').show()
+
+        }
+    });
+}
+
+
+// Event: Search button
+$("button").on("click", function(e) {
+
+    e.preventDefault();
+
+    var $myInput = $("input");
+    var requestedArtist = $myInput.val();
+
+    // Artists
+    $.ajax({
+        url: spotifyURL+'search?q='+requestedArtist+'&type=artist',
+        dataType: "json",
+        success: function( response ) {
+
+            // No artist found
+            if ( response.artists.items.length == 0 ){
+
+                $('#top-h2').html('Sorry no artists found :( Please try again.')
+                $('#top-h2').show()
+
+                $('select').hide()
+                hideFields();
+
+            // More than one found
+            }else if( response.artists.items.length > 1 ){
+
+                $('#top-h2').html('Multiple artists found ('+response.artists.items.length+'). <br> Please select one from the list:')
+                $('#top-h2').show()
+
+                hideFields();
+
+                var numResponses = response.artists.items.length;
+                var listResponses ='<option>Select artist...</option>';
+
+                // Storing the Artist ID into the option menu (besides the Artist Name)
+                for (var i=0; i<numResponses; i++) {
+                    listResponses += "<option value='"+response.artists.items[i].id+"'>" + response.artists.items[i].name +"</option>"
+                }
+                $("#artist-list").html(listResponses)
+                $("#artist-list").show()
+
+            // Exact match! Only one artist found
+            }else{
+
+                $('#top-h2').html('One (1) artist found: '+response.artists.items[0].name)
+                $('#top-h2').show()
+
+                // Only one artist: No need to create an Option menu and we can go directly to render de Album List
+                $("#artist-list").html('<option>'+response.artists.items[0].name+'</option>')
+                renderAlbums( response.artists.items[0].id )
+
+            }
+
+        }
+
+    })
+
+});
+
+
+// Event: Artist list selected
+$( "#artist-list" ).change(function(e) {
+
+    // Sending artist ID to renderAlbums() taken it from the Options menu
+    renderAlbums ( this.value )
+
+});
+
+
+// Event: Album list selected
+$( "#album-list" ).change(function(e) {
+
+    // Taking the album ID stored in the Options menu
+    var albumID = this.value;
+
+    // Hide unnecessary fields
+    $('#top-h5').hide()
+    $('iframe').attr("src","");
+    $('iframe').hide()
+
+    // Extract the thumbnail URL from the option menu and paint it
+    var selected = $(this).find('option:selected');
+    var albumPicture = selected.data('url');
+    $('img').attr("src",albumPicture);
+    $('img').show()
+
+    // Tracks
+    $.ajax({
+        url: spotifyURL+'albums/'+albumID+'/tracks',
+        dataType: "json",
+        success: function( response ) {
+
+            $('#top-h4').html('Tracks: ('+response.items.length+')')
+            $('#top-h4').show()
+
+            var numResponses = response.items.length;
+            var listResponses ='<option>Select track...</option>';
+
+            // Storing the track ID into the Options Menu (besides the track name)
+            for (var i=0; i<numResponses; i++) {
+                listResponses += "<option value='"+response.items[i].id+"'>"+response.items[i].name+"</option>"
+            }
+            $("#track-list").html(listResponses)
+            $('#track-list').show()
+
+        }
+    });
+
+});
+
+
+// Event: Track list selected
+$( "#track-list" ).change(function(e) {
+
+    // Taking track ID stored into the Options menu
+    var trackID = this.value;
+
+    // Play track
+    $.ajax({
+        url: spotifyURL+'tracks/'+trackID,
+        dataType: "json",
+        success: function( response ) {
+
+            $('#top-h5').html('Playing 30 free seconds...')
+            $('#top-h5').show()
+
+            $('iframe').attr("src",response.preview_url);
+            $('iframe').show()
+
+        }
+    });
+});
+
+
+</script>
+
+</body>
+</html>
