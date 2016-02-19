@@ -1,4 +1,4 @@
-:# Challenge: Spotify API
+# Challenge: Spotify API
 
 Create an app that:
 
@@ -12,3 +12,6 @@ Hints:
 - https://developer.spotify.com/web-api/search-item/
 - https://developer.spotify.com/web-api/console/get-search-item/?q=tania+bowra&type=artist#complete
 - `https://api.spotify.com` 
+
+Result:
+http://juan-domenech.github.io/sandbox/javascript/jquery-spotify-api/
