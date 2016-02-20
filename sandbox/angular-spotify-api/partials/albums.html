@@ -1,4 +1,20 @@
-<img ng-src="{{mainImageUrl}}" class="artist">
+
+
+<h1>{{ArtistName}}</h1>
+
+<a href="#/artists/{{query}}">Back</a>
+
+<ul class="albums">
+  <li ng-repeat="items in albums" class="thumbnail">
+
+    <a href="#/album/{{items.id}}">{{items.name}}</a>
+
+  </li>
+</ul>
+
+
+
+<!--
 
 <h1>{{artist.name}}</h1>
 
@@ -33,4 +49,6 @@
     <dd>{{artist.connectivity.gps | checkmark}}</dd>
   </dl>
 
+
+-->
 

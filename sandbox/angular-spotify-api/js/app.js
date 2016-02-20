@@ -7,12 +7,12 @@ var SpotifyAPIApp = angular.module('SpotifyAPIApp', [
 SpotifyAPIApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/artists', {
-        templateUrl: 'partials/artist-list.html',
+      when('/artists/:Search', {
+        templateUrl: 'partials/search.html',
         controller: 'ArtistListCtrl'
       }).
-      when('/artists/:ArtistId', {
-        templateUrl: 'partials/artistdetail.html',
+      when('/artist/:ArtistId', {
+        templateUrl: 'partials/albums.html',
         controller: 'ArtistDetailCtrl'
       }).
       otherwise({
