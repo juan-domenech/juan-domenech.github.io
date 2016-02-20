@@ -23,6 +23,10 @@ SpotifyAPIApp.config(['$routeProvider',
         templateUrl: 'partials/albums.html',
         controller: 'AlbumsCtrl'
       }).
+      when('/tracks/:AlbumId/:AlbumName', {
+        templateUrl: 'partials/tracks.html',
+        controller: 'TracksCtrl'
+      }).
       otherwise({
         redirectTo: '/artists'
       });

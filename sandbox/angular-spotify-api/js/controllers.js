@@ -59,3 +59,19 @@ SpotifyAPIControllers.controller('AlbumsCtrl', ['$scope', '$routeParams', '$http
     //  $scope.mainImageUrl = imageUrl;
     //};
   }]);
+
+
+// Show Tracks
+SpotifyAPIControllers.controller('TracksCtrl', ['$scope', '$routeParams', '$http',
+  function($scope, $routeParams, $http) {
+
+    $http.get('https://api.spotify.com/v1/albums/'+ $routeParams.AlbumId +'/tracks').success(function(data) {
+      $scope.tracks = data.items;
+
+console.log($scope.tracks)
+
+      });
+
+    $scope.AlbumName = $routeParams.AlbumName;
+
+  }]);
