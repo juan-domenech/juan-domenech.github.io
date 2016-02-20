@@ -5,8 +5,20 @@
 
       <h1>Spotify API AngularJS sandbox</h1>
 
-      Search: <input ng-model="query"><br>
+      Search: <input ng-model="Search" autofocus ng-change="typeSearch(Search)"><br>
 
+<!--
+<span ng-if="Search">
+  {{typeSearch(Search)}}
+  {{1+1}}
+</span>
+-->
+
+<!--
+{{'/artists/'+Search}}
+
+<p>{{location.path()}}</p>
+-->
 
     </div>
 
@@ -15,9 +27,9 @@
 
 
       <ul class="artists">
-        <li ng-repeat="items in artists | filter:query" class="thumbnail">
+        <li ng-repeat="items in artists | filter:Search" class="thumbnail">
 
-          <a href="#/artist/{{items.id}}">{{items.name}}</a>
+          <a href="#/albums/{{items.id}}/{{items.name}}">{{items.name}}</a>
 
         </li>
       </ul>
