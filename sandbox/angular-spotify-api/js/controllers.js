@@ -18,7 +18,6 @@ SpotifyAPIControllers.controller('ArtistListCtrl', ['$scope', '$routeParams', '$
     }
     //console.log($location.path());
     //$scope.location = $location;
-    //$scope.orderProp = 'age';
 
     //
     // Function executed everytime Input has changed
@@ -53,6 +52,7 @@ SpotifyAPIControllers.controller('AlbumsCtrl', ['$scope', '$routeParams', '$http
 
       });
 
+    $scope.ArtistId = $routeParams.ArtistId;
     $scope.ArtistName = $routeParams.ArtistName;
 
     //$scope.setImage = function(imageUrl) {
@@ -68,9 +68,28 @@ SpotifyAPIControllers.controller('TracksCtrl', ['$scope', '$routeParams', '$http
 
     $http.get('https://api.spotify.com/v1/albums/'+ $routeParams.AlbumId +'/tracks').success(function(data) {
       $scope.tracks = data.items;
-      //console.log($scope.tracks)
       });
 
+    $scope.AlbumName = $routeParams.AlbumName;
+    $scope.ArtistName = $routeParams.ArtistName;
+
+    //$scope.ArtistId = data.items[0].artists[0].id
+    //console.log($scope.tracks)
+    //console.log("2",$scope.ArtistId)
+
+  }]
+);
+
+
+// Play Track
+SpotifyAPIControllers.controller('PlayCtrl', ['$scope', '$routeParams', '$http',
+  function($scope, $routeParams, $http) {
+
+    $http.get('https://api.spotify.com/v1/tracks/'+ $routeParams.TrackId).success(function(data) {
+      $scope.track = data;
+      });
+
+    $scope.TrackName = $routeParams.TrackName;
     $scope.AlbumName = $routeParams.AlbumName;
     $scope.ArtistName = $routeParams.ArtistName;
 

@@ -1,15 +1,17 @@
+<a class="link-back" href="#/albums/{{tracks[0].artists[0].id}}/{{ArtistName}}">Back</a>
+
 <h1>Spotify API AngularJS sandbox</h1>
 
 <h2>Artist: {{ArtistName}}</h2>
 
 <h3>Album: {{AlbumName}}</h3>
 
-<a class="link-back" href="#/albums/{{ArtistId}}/{{ArtistName}}">Back</a>
+<h4>Tracks:</h4>
 
 <ul class="tracks">
   <li ng-repeat="items in tracks" class="thumbnail">
 
-    <a href="#/track/{{items.id}}/{{items.name}}/{{AlbumName}}/{{ArtistName}}">{{items.name}}</a>
+    <a href="#/play/{{items.id}}/{{items.name}}/{{AlbumName}}/{{ArtistName}}">{{items.name}}</a>
 
   </li>
 </ul>
