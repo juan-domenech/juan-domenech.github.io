@@ -8,5 +8,11 @@
 
 <h4>Track: {{TrackName}}</h4>
 
-<iframe class='play' src="{{track.preview_url}}" width='300' height='80'>
-</iframe>
+<div ng-if="track.preview_url">
+	<iframe class='play' src="{{track.preview_url}}" width='300' height='80'>
+	</iframe>
+</div>
+
+<div ng-if="track.preview_url == null">
+ <p>Sorry. No 30 seconds free preview available :(</p>
+</div>

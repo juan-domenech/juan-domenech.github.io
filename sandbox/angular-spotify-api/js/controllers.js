@@ -68,6 +68,7 @@ SpotifyAPIControllers.controller('PlayCtrl', ['$scope', '$routeParams', '$http',
 
     $http.get('https://api.spotify.com/v1/tracks/'+ $routeParams.TrackId).success(function(data) {
       $scope.track = data;
+      console.log(data)
       });
 
     $scope.TrackName = $routeParams.TrackName;
