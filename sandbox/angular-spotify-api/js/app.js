@@ -23,7 +23,7 @@ SpotifyAPIApp.config(['$routeProvider',
         templateUrl: 'partials/albums.html',
         controller: 'AlbumsCtrl'
       }).
-      when('/tracks/:AlbumId/:AlbumName', {
+      when('/tracks/:AlbumId/:AlbumName/:ArtistName', {
         templateUrl: 'partials/tracks.html',
         controller: 'TracksCtrl'
       }).

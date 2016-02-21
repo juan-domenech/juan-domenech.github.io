@@ -26,7 +26,7 @@ SpotifyAPIControllers.controller('ArtistListCtrl', ['$scope', '$routeParams', '$
       //$scope.mainImageUrl = imageUrl;
       //console.log(Search);
 
-      // Make sure the user has entered something in Input
+      // Make sure the user has entered something in Input (it might be a backspace)
       if (Search != undefined && Search != ''){
 
         // Search Artist with whatever we have in the search box
@@ -37,8 +37,8 @@ SpotifyAPIControllers.controller('ArtistListCtrl', ['$scope', '$routeParams', '$
         });
       }
     };
-
-  }]);
+  }]
+);
 
 
 // Show Albums
@@ -58,7 +58,8 @@ SpotifyAPIControllers.controller('AlbumsCtrl', ['$scope', '$routeParams', '$http
     //$scope.setImage = function(imageUrl) {
     //  $scope.mainImageUrl = imageUrl;
     //};
-  }]);
+  }]
+);
 
 
 // Show Tracks
@@ -67,11 +68,11 @@ SpotifyAPIControllers.controller('TracksCtrl', ['$scope', '$routeParams', '$http
 
     $http.get('https://api.spotify.com/v1/albums/'+ $routeParams.AlbumId +'/tracks').success(function(data) {
       $scope.tracks = data.items;
-
-console.log($scope.tracks)
-
+      //console.log($scope.tracks)
       });
 
     $scope.AlbumName = $routeParams.AlbumName;
+    $scope.ArtistName = $routeParams.ArtistName;
 
-  }]);
+  }]
+);

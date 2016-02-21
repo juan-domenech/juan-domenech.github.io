@@ -1,22 +1,11 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2">
+<h1>Spotify API AngularJS sandbox</h1>
 
-      <h1>Spotify API AngularJS sandbox</h1>
+Search by artist name: <input class="main-search" ng-model="Search" autofocus ng-change="typeSearch(Search)"><br>
 
-      Search: <input class="main-search" ng-model="Search" autofocus ng-change="typeSearch(Search)"><br>
+<ul class="artists">
+  <li ng-repeat="items in artists | filter:Search" class="thumbnail">
 
-    </div>
-    <div class="col-md-10" class="main-results">
+  <a href="#/albums/{{items.id}}/{{items.name}}">{{items.name}}</a>
 
-      <ul class="artists">
-        <li ng-repeat="items in artists | filter:Search" class="thumbnail">
-
-          <a href="#/albums/{{items.id}}/{{items.name}}">{{items.name}}</a>
-
-        </li>
-      </ul>
-
-    </div>
-  </div>
-</div>
+  </li>
+</ul>
