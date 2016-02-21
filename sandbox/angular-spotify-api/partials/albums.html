@@ -9,9 +9,9 @@
 <ul class="albums">
   <li ng-repeat="items in albums" class="thumbnail">
 
-    <a href="#/tracks/{{items.id}}/{{items.name}}/{{ArtistName}}">{{items.name}}</a>
+    <a href="#/tracks/{{items.id}}/{{items.name}}/{{ArtistName}}">{{items.name}}
+      <img ng-src="{{items.images[2].url}}" align="center">
+    </a>
 
   </li>
 </ul>
-
-
