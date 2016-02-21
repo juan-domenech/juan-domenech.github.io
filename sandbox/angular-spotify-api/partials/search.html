@@ -2,9 +2,10 @@
 
 Search by artist name: <input class="main-search" ng-model="Search" autofocus ng-change="typeSearch(Search)"><br>
 
-<div ng-if="Search || artists">
+<!-- Only present list when there is something to show -->
+<div ng-if="artists[0].name != undefined && Search != '' ">
 
-  <h2>Artists:</h2>
+  <h2>Artists found:</h2>
 
   <ul class="artists">
     <li ng-repeat="items in artists | filter:Search" class="thumbnail">

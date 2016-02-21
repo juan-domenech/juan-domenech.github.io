@@ -1,9 +1,6 @@
-//angular.module('SpotifyAPIFilters', []).filter('checkmark', function() {
-//  return function(input) {
-//    return input ? '\u2713' : '\u2718';
-//  };
-//});
-
+// Filter to whitelist the Spotify CDN as valid external resource
+//https://docs.angularjs.org/api/ng/provider/$sceDelegateProvider
+//
 angular.module('SpotifyAPIFilters', []).config(function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
     // Allow same origin resource loads.

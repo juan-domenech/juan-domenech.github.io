@@ -12,18 +12,12 @@ SpotifyAPIControllers.controller('ArtistListCtrl', ['$scope', '$routeParams', '$
       // Search Artist using the string in the URL
       $http.get('https://api.spotify.com/v1/search?q='+ $routeParams.Search +'&type=artist').success(function(data) {
         $scope.artists = data.artists.items;
-        //console.log("scope.artists",$scope.artists)
-        //console.log("routeParams",$routeParams.Search)
       });
     }
-    //console.log($location.path());
-    //$scope.location = $location;
 
     //
     // Function executed everytime Input has changed
     $scope.typeSearch = function(Search) {
-      //$scope.mainImageUrl = imageUrl;
-      //console.log(Search);
 
       // Make sure the user has entered something in Input (it might be a backspace)
       if (Search != undefined && Search != ''){
@@ -31,8 +25,6 @@ SpotifyAPIControllers.controller('ArtistListCtrl', ['$scope', '$routeParams', '$
         // Search Artist with whatever we have in the search box
         $http.get('https://api.spotify.com/v1/search?q='+ Search +'&type=artist').success(function(data) {
           $scope.artists = data.artists.items;
-          //console.log("scope.artists",$scope.artists)
-          //console.log("routeParams",$routeParams.Search)
         });
       }
     };
@@ -46,18 +38,11 @@ SpotifyAPIControllers.controller('AlbumsCtrl', ['$scope', '$routeParams', '$http
 
     $http.get('https://api.spotify.com/v1/artists/'+ $routeParams.ArtistId +'/albums').success(function(data) {
       $scope.albums = data.items;
-      //$scope.mainImageUrl = data.images[0];
-      //console.log($routeParams.ArtistId)
-      //console.log($scope.albums)
-
       });
 
     $scope.ArtistId = $routeParams.ArtistId;
     $scope.ArtistName = $routeParams.ArtistName;
 
-    //$scope.setImage = function(imageUrl) {
-    //  $scope.mainImageUrl = imageUrl;
-    //};
   }]
 );
 
@@ -72,10 +57,6 @@ SpotifyAPIControllers.controller('TracksCtrl', ['$scope', '$routeParams', '$http
 
     $scope.AlbumName = $routeParams.AlbumName;
     $scope.ArtistName = $routeParams.ArtistName;
-
-    //$scope.ArtistId = data.items[0].artists[0].id
-    //console.log($scope.tracks)
-    //console.log("2",$scope.ArtistId)
 
   }]
 );
