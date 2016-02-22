@@ -4,7 +4,7 @@ var SpotifyAPIControllers = angular.module('SpotifyAPIControllers', []);
 // Artists Search (Main page)
 SpotifyAPIControllers.controller('ArtistListCtrl', ['$scope', '$routeParams', '$http', '$location',
 
-  // Function executed when we get an artist name on URL Parameters
+  // Function executed when we get an artist name at the URL Parameters
   function ($scope, $routeParams, $http, $location) {
 
     // Make sure we have something in the URL to work with
@@ -28,6 +28,24 @@ SpotifyAPIControllers.controller('ArtistListCtrl', ['$scope', '$routeParams', '$
         });
       }
     };
+
+    $scope.typeEnter = function(Search) {
+
+      // Make sure the user has entered something in Input (it might be a backspace)
+      if (Search != undefined && Search != ''){
+
+        // Search Artist with whatever we have in the search box
+        $http.get('https://api.spotify.com/v1/search?q='+ Search +'&type=artist').success(function(data) {
+          $scope.artists = data.artists.items;
+          console.log($scope.artists)
+          console.log($location.path() )
+          $location.path("albums/"+data.artists.items[0].id+"/"+data.artists.items[0].name)
+          console.log($location.path() )
+        });
+
+      }
+    };
+
   }]
 );
 

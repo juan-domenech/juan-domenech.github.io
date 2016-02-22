@@ -1,4 +1,6 @@
-<a class="link-back" href="#/tracks/{{track.album.id}}/{{AlbumName}}/{{ArtistName}}">Back</a>
+<a class="link-back" href="#/tracks/{{track.album.id}}/{{AlbumName}}/{{ArtistName}}">
+	<button type="button" class="btn btn-info">Back</button>
+</a>
 
 <h1>Spotify API AngularJS sandbox</h1>
 
@@ -13,6 +15,6 @@
 	</iframe>
 </div>
 
-<div ng-if="track.preview_url == null">
+<div ng-if=" ! track.preview_url">
  <p>Sorry. No 30 seconds free preview available :(</p>
 </div>
