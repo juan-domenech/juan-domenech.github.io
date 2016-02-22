@@ -37,10 +37,8 @@ SpotifyAPIControllers.controller('ArtistListCtrl', ['$scope', '$routeParams', '$
         // Search Artist with whatever we have in the search box
         $http.get('https://api.spotify.com/v1/search?q='+ Search +'&type=artist').success(function(data) {
           $scope.artists = data.artists.items;
-          console.log($scope.artists)
-          console.log($location.path() )
+          // After Enter Key detected send user to Albums choosing the first artist of the list
           $location.path("albums/"+data.artists.items[0].id+"/"+data.artists.items[0].name)
-          console.log($location.path() )
         });
 
       }
@@ -69,6 +67,14 @@ SpotifyAPIControllers.controller('AlbumsCtrl', ['$scope', '$routeParams', '$http
 SpotifyAPIControllers.controller('TracksCtrl', ['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http) {
 
+    // Get Album Thumbnail
+    $http.get('https://api.spotify.com/v1/albums/'+ $routeParams.AlbumId).success(function(data) {
+      $scope.AlbumThumbnail = data.images[1].url;
+
+    });
+
+
+    // Get Track List
     $http.get('https://api.spotify.com/v1/albums/'+ $routeParams.AlbumId +'/tracks').success(function(data) {
       $scope.tracks = data.items;
       });
@@ -84,9 +90,15 @@ SpotifyAPIControllers.controller('TracksCtrl', ['$scope', '$routeParams', '$http
 SpotifyAPIControllers.controller('PlayCtrl', ['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http) {
 
+    // Get Album Thumbnail
+    $http.get('https://api.spotify.com/v1/tracks/'+ $routeParams.TrackId).success(function(data) {
+      $scope.AlbumThumbnail = data.album.images[1].url;
+
+    });
+
     $http.get('https://api.spotify.com/v1/tracks/'+ $routeParams.TrackId).success(function(data) {
       $scope.track = data;
-      console.log(data)
+
       });
 
     $scope.TrackName = $routeParams.TrackName;
