@@ -70,7 +70,8 @@ SpotifyAPIControllers.controller('TracksCtrl', ['$scope', '$routeParams', '$http
     // Get Album Thumbnail
     $http.get('https://api.spotify.com/v1/albums/'+ $routeParams.AlbumId).success(function(data) {
       $scope.AlbumThumbnail = data.images[1].url;
-
+      //
+      $scope.ArtistId = data.artists[0].id;
     });
 
 
@@ -94,6 +95,11 @@ SpotifyAPIControllers.controller('PlayCtrl', ['$scope', '$routeParams', '$http',
       $scope.track = data;
       // Get Album Thumbnail
       $scope.AlbumThumbnail = data.album.images[1].url;
+      //
+      $scope.ArtistId = data.artists[0].id;
+      $scope.ArtistName = data.artists[0].name;
+      $scope.AlbumId = data.album.id;
+
       });
 
     $scope.TrackName = $routeParams.TrackName;

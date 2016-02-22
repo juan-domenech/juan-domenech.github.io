@@ -1,10 +1,12 @@
-<a class="link-back" href="#/albums/{{tracks[0].artists[0].id}}/{{ArtistName}}">
+<a class="link-back" href="#/albums/{{ArtistId}}/{{ArtistName}}">
   <button type="button" class="btn btn-info">Back</button>
 </a>
 
 <h1>Spotify API AngularJS sandbox</h1>
 
-<h2>Artist: {{ArtistName}}</h2>
+<a href="#/albums/{{ArtistId}}/{{ArtistName}}">
+  <h2>Artist: {{ArtistName}}</h2>
+</a>
 
 <h3>Album: {{AlbumName}}</h3>
 
@@ -20,6 +22,6 @@
   </li>
 </ul>
 
-<a class="link-back" href="#/albums/{{tracks[0].artists[0].id}}/{{ArtistName}}">
+<a class="link-back" href="#/albums/{{ArtistId}}/{{ArtistName}}">
   <button type="button" class="btn btn-info">Back</button>
 </a>
