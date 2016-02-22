@@ -13,8 +13,8 @@
 <h4>Track: {{TrackName}}</h4>
 
 <div ng-if="track.preview_url">
-	<iframe class='play' src="{{track.preview_url}}" width='300' height='80'>
-	</iframe>
+	<audio class='play' ng-src="{{track.preview_url}}" controls autoplay>
+	</audio>
 </div>
 
 <div ng-if=" ! track.preview_url">
