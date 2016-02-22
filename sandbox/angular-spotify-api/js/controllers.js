@@ -54,16 +54,16 @@ SpotifyAPIControllers.controller('AlbumsCtrl', ['$scope', '$routeParams', '$http
 
     $http.get('https://api.spotify.com/v1/artists/'+ $routeParams.ArtistId +'/albums').success(function(data) {
         $scope.albums = data.items;
-
       });
 
-      //  for (var i=0; i < $rootScope.albums.length; i++){
-      //      $http.get('https://api.spotify.com/v1/albums/'+ $rootScope.albums[i].id ).success(function(data_secondary) {
-      //          //$scope.albums[i].year = data_secondary.release_date.slice(0,4);
-      //          //console.log($scope.albums[i].year)
-      //          console.log(i)
-      //      });
-      //  }
+    //$scope.GetAlbumYear= function(AlbumId) {
+    //  $http.get('https://api.spotify.com/v1/albums/'+ AlbumId ).success(function(data) {
+    //      //$scope.albums[i].AlbumYear = data.release_date.slice(0,4);
+    //      //console.log(data.release_date.slice(0,4) );
+    //      $scope.Year =  data.release_date.slice(0,4);
+    //      console.log($scope.Year)
+    //  });
+    //}
 
     $scope.ArtistId = $routeParams.ArtistId;
     $scope.ArtistName = $routeParams.ArtistName;
