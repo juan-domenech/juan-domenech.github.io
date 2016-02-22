@@ -90,15 +90,10 @@ SpotifyAPIControllers.controller('TracksCtrl', ['$scope', '$routeParams', '$http
 SpotifyAPIControllers.controller('PlayCtrl', ['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http) {
 
-    // Get Album Thumbnail
-    $http.get('https://api.spotify.com/v1/tracks/'+ $routeParams.TrackId).success(function(data) {
-      $scope.AlbumThumbnail = data.album.images[1].url;
-
-    });
-
     $http.get('https://api.spotify.com/v1/tracks/'+ $routeParams.TrackId).success(function(data) {
       $scope.track = data;
-
+      // Get Album Thumbnail
+      $scope.AlbumThumbnail = data.album.images[1].url;
       });
 
     $scope.TrackName = $routeParams.TrackName;
