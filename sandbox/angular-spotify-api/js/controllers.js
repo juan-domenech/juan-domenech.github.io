@@ -53,8 +53,17 @@ SpotifyAPIControllers.controller('AlbumsCtrl', ['$scope', '$routeParams', '$http
   function($scope, $routeParams, $http) {
 
     $http.get('https://api.spotify.com/v1/artists/'+ $routeParams.ArtistId +'/albums').success(function(data) {
-      $scope.albums = data.items;
+        $scope.albums = data.items;
+
       });
+
+      //  for (var i=0; i < $rootScope.albums.length; i++){
+      //      $http.get('https://api.spotify.com/v1/albums/'+ $rootScope.albums[i].id ).success(function(data_secondary) {
+      //          //$scope.albums[i].year = data_secondary.release_date.slice(0,4);
+      //          //console.log($scope.albums[i].year)
+      //          console.log(i)
+      //      });
+      //  }
 
     $scope.ArtistId = $routeParams.ArtistId;
     $scope.ArtistName = $routeParams.ArtistName;
@@ -67,9 +76,11 @@ SpotifyAPIControllers.controller('AlbumsCtrl', ['$scope', '$routeParams', '$http
 SpotifyAPIControllers.controller('TracksCtrl', ['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http) {
 
-    // Get Album Thumbnail
     $http.get('https://api.spotify.com/v1/albums/'+ $routeParams.AlbumId).success(function(data) {
+      // Get Album Thumbnail
       $scope.AlbumThumbnail = data.images[1].url;
+      // Get Release Year
+      $scope.AlbumYear = data.release_date.slice(0,4)
       //
       $scope.ArtistId = data.artists[0].id;
     });
@@ -99,6 +110,11 @@ SpotifyAPIControllers.controller('PlayCtrl', ['$scope', '$routeParams', '$http',
       $scope.ArtistId = data.artists[0].id;
       $scope.ArtistName = data.artists[0].name;
       $scope.AlbumId = data.album.id;
+
+        // Get Release Year using the previously obtained AlbumId
+        $http.get('https://api.spotify.com/v1/albums/'+ $scope.AlbumId).success(function(data) {
+          $scope.AlbumYear = data.release_date.slice(0,4)
+        });
 
       });
 
