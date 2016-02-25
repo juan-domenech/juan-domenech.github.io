@@ -1,0 +1,279 @@
+
+
+a:hover{
+	text-decoration: none;
+}
+a:visited{
+	color: #1c5f15;
+}
+
+.navbar{
+	font-size: 18px;
+	background-color:rgba(255, 255, 255, 0.9);
+}
+
+.flag{
+	height: 40px;
+
+}
+
+
+.blog-post{
+	color:white;
+	margin:10px;
+	overflow:hidden; /* rework! */
+	text-overflow: ellipsis; /* rework! */
+}
+
+h1{
+	font-size: 30px;
+}
+h2{
+	font-size: 25px;
+}
+h3{
+	font-size: 12px;
+}
+h4{
+	font-size: 12px; /*responsive*/
+}
+h5{
+	font-size: 10px;
+}
+
+#primary-post{
+	background-image: url(../images/adopta-la-protectora-animals-tarragona-2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 500px;
+}
+
+#primary-text{
+	color:white;
+	background-color: #35b026;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding: 15px;
+	padding-top: 0px;
+	position: absolute;
+	top:30px;
+}
+
+#secondary-post{
+	background-image: url(../images/mapa.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 200px;
+
+}
+
+#secondary-text{
+	color:white;
+	background-color: #35b026;
+	margin-left: 200px; /* responsive */
+	margin-right: 30px;
+	margin-top: 10px;
+	padding: 10px;
+
+	position: relative;
+	top:30px;
+
+}
+
+
+#terciary-post{
+	background-image: url(../images/necessitem-ajuda-a-la-protectora.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 200px;
+
+}
+
+#terciary-text{
+	color:white;
+	background-color: #35b026;
+	margin-left: 200px; /* responsive */
+	margin-right: 30px;
+	margin-top: 10px;
+	padding: 10px;
+
+	position: relative;
+	top:30px;
+
+}
+
+.standard-post {
+	color: #1c5f15;
+	background-color: white;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+
+#post-1{
+	background-image: url(../images/abandono-animales-madrid.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 120px;
+}
+
+#text-post-1{
+	color: #1c5f15;
+	margin-top: 0px;
+	margin-left: 250px; /* responsive */
+	margin-right: 30px;
+	padding: 0px;
+}
+
+#post-2{
+	background-image: url(../images/calendari.jpg);
+	background-repeat: no-repeat;
+	background-size: 213px;
+	height: 120px;
+}
+
+#text-post-2{
+	color: #1c5f15;
+	margin-top: 0px;
+	margin-left: 250px; /* responsive */
+	margin-right: 30px;
+	padding: 0px;
+}
+
+.blog-sidebar{
+	color: #1c5f15;
+	font-size: 18px;
+}
+
+.blog-sidebar a{
+	font-size: 30px;
+}
+
+.icon{
+	width: 40px;
+	margin-right: 10px;
+}
+
+
+
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+	h4{
+		font-size: 0px;
+	}
+	#links-collection{
+		display: none;
+	}
+	.icon{
+		width: 80px;
+	}
+	.blog-sidebar a{
+		font-size: 30px;
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+	h4{
+		font-size: 0px;
+	}
+	.icon{
+		width: 80px;
+	}
+	.blog-sidebar a{
+		font-size: 30px;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	h4{
+    	font-size: 14px;
+  }
+	#links-collection{
+		display: block;
+	}
+	.icon{
+		width: 40px;
+	}
+	.blog-sidebar a{
+		font-size: 15px;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	h4{
+    	font-size: 14px;
+    }
+	#secondary-text{
+		margin-left: 400px;
+	}
+	#terciary-text{
+		margin-left: 400px;
+	}
+	#links-collection{
+		display: block;
+	}
+	.icon{
+		width: 40px;
+	}
+	.blog-sidebar a{
+		font-size: 15px;
+	}
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	#secondary-text{
+		margin-left: 400px;
+	}
+	#terciary-text{
+		margin-left: 400px;
+	}
+	h4{
+    	font-size: 14px;
+  }
+  #links-collection{
+		display: block;
+	}
+	.icon{
+		width: 40px;
+	}
+	.blog-sidebar a{
+		font-size: 15px;
+	}
+}
+
+
+
+
+/*
+#text-box-primary{
+    display: block;
+        bottom: 2em;
+    left: 2em;
+    min-height: 13em;
+    padding: 1.5em 2em 2.25em;
+    position: absolute;
+    width: 15em;
+    background-color: #ad1457;
+    z-index: 2;
+
+    text-indent: 10em;
+
+}
+*/
+/*
+#main-logo {
+	background-image: url(../images/la-protectora-org-tarragona-logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+*/
+
+/*
+#castellano-icon{
+	background-image: url(../images/Flag-Icon-Spain.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+*/
