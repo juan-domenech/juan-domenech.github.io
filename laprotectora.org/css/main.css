@@ -105,44 +105,51 @@ h5{
 .standard-post {
 	color: #1c5f15;
 	background-color: white;
+	background-repeat: no-repeat;
+	height: 120px;
 	overflow:hidden;
 	text-overflow: ellipsis;
 }
 
-#post-1{
-	background-image: url(../images/abandono-animales-madrid-2.jpg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	height: 120px;
-}
-
-#text-post-1{
+.standard-text-post {
 	color: #1c5f15;
 	margin-top: 0px;
 	margin-left: 250px; /* responsive */
 	margin-right: 30px;
 	padding: 0px;
+}
+
+#post-1{
+	background-image: url(../images/abandono-animales-madrid-2.jpg);
+	background-size: contain;
+}
+
+#text-post-1{
+
 }
 
 #post-2{
 	background-image: url(../images/calendari.jpg);
-	background-repeat: no-repeat;
 	background-size: 213px;
-	height: 120px;
 }
 
 #text-post-2{
-	color: #1c5f15;
-	margin-top: 0px;
-	margin-left: 250px; /* responsive */
-	margin-right: 30px;
-	padding: 0px;
 }
+
+#post-3{
+	background-image: url(../images/facebook-logo-long.png);
+	background-size: 220px;
+}
+
+#text-post-3{
+}
+
 
 .blog-sidebar{
 	color: #1c5f15;
 	font-size: 18px;
 }
+
 
 .blog-sidebar a{
 	font-size: 30px;
