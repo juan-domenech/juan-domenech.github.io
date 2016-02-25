@@ -25,112 +25,283 @@
 	https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js
 	-->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<script src="css/jquery.min.js"></script>
-	<script src="css/bootstrap.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<style>
+	/*
+	nav ul {
+		display: inline;
+		float: left;
+		list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: block;
+	}
+*/
+
+/*
+#primary{
+	background-image: url(images/adopta-la-protectora-animals-tarragona.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+
+border-style: solid;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    text-indent: -9999em;
+    transition: .4s;
+    width: 100%;
+    backface-visibility: hidden;
+        background: transparent;
+
+}
+*/
+
+.navbar{
+	font-size: 18px;
+}
+
+.flag{
+	height: 40px;
+	padding: 0px;
+	margin:0px;
+	line-height: 0px;
+	vertical-align: top;
+
+
+}
+
+#primary-post{
+	background-image: url(images/adopta-la-protectora-animals-tarragona.jpg);
+	background-repeat: no-repeat;
+	background-size: auto;
+	width:100%;
+	height: 500px;
+
+	color:white;
+}
+
+#primary-text{
+	margin-left: 30px;
+	margin-right: 30px;
+	background-color: #35b026;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: absolute;
+	top:30px;
+}
+
+
+/*
+#text-box-primary{
+    display: block;
+        bottom: 2em;
+    left: 2em;
+    min-height: 13em;
+    padding: 1.5em 2em 2.25em;
+    position: absolute;
+    width: 15em;
+    background-color: #ad1457;
+    z-index: 2;
+
+    text-indent: 10em;
+
+}
+*/
+/*
+#main-logo {
+	background-image: url(images/la-protectora-org-tarragona-logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+*/
+
+/*
+#castellano-icon{
+	background-image: url(images/Flag-Icon-Spain.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+*/
+
+	</style>
+
+
+
 
 </head>
 
-<body id="index" class="body">
+<body id="index" class="col-sm-12 body">
 
-	<header id="header" class="language-cat">
-		<nav><ul>
-			<li class="active">
-				<a href="index.html">
-					<img src="images/la-protectora-org-tarragona-logo.jpg" alt="Home">Home
-				</a></li>
+
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <button type="button" class="btn btn-default">
+	      	<a href="#"><img src="images/la-protectora-org-tarragona-logo.png" height="80px"></a>
+	      </button>
+	       <button type="button" class="navbar-toggle collapsed">
+	       	<img class="flag" src="images/Flag-Icon-Catalonia.png">
+	       </button>
+	       <button type="button" class="navbar-toggle collapsed">
+	       	<img class="flag" src="images/Flag-Icon-Spain.png">
+	       </button>
+	    </div>
+	    <div id="navbar" class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav">
+	        <li><a href="#">Adopta!</a></li>
+	        <li><a href="#about">On som?</a></li>
+	        <li><a href="#contact">Voluntaris</a></li>
+
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li class="flag"><a href="../navbar/"><img class="flag" src="images/Flag-Icon-Catalonia.png"></a></li>
+	        <li class="flag"><a href="../navbar/"><img class="flag" src="images/Flag-Icon-Spain.png"></a></li>
+	        <li><a href="./">Altres seccions:<span class="sr-only">(current)</span></a></li>
+	      </ul>
+	    </div><!--/.nav-collapse -->
+	  </div>
+	</nav>
+
+<!--
+
+	<header id="header" class="row language-cat">
+		<nav class="col-sm-12"><ul class="nav navbar-nav navbar-left navbar-fixed-top">
+			<li class="navbar-header navbar-brand" id="main-logo" ><a href="index.html">Logo<img src="images/la-protectora-org-tarragona-logo.pngx"></a></a></li>
 			<li><a href="#">Adopta!</a></li>
 			<li><a href="#">On som?</a></li>
 			<li><a href="#">Voluntaris</a></li>
 			<li><a href="#">Mascota perduda</a></li>
+			<li id="castellano-icon"><a href="#"><img src="images/Flag-Icon-Spain.png"></a></li>
+			<li id="catalan-icon"><a href="#">Català</a></li>
 		</ul></nav>
 	</header>
 
+-->
 
-	<article id="primary" class="article language-cat">
-		<a href="adopta.html">
-			<div class="text-box-primary">
-				<header>
-					<h1>Adopta! (Si us plau)</h1>
-					<h4>Des d'aquí fem una crida a la importància de l'adopció</h4>
-				</header>
-					<p>Penseu que si adopteu un gos, no només li esteu donant amb ell una nova vida, sinó que també ajudeu a la resta de gossos que es queden a la gàbia a tenir una mica més d'espai vital, fet nolt important dabant l'augment dels abandonaments...</p>
+
+
+
+<div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title"></h1>
+        <p class="lead blog-description"><br><br><br></p>
+      </div>
+
+	<div class="row">
+
+    <div class="col-sm-8 blog-main">
+
+      <div id="primary-post" class="blog-post language-cat">
+      	<div id="primary-text">
+	        <h2 class="blog-post-title">Adopta! (Si us plau)</h2>
+	        <h4>Des d'aquí fem una crida a la importància de l'adopció...</h4>
+					<!--<p>Penseu que si adopteu un gos, no només li esteu donant amb ell una nova vida, sinó que també ajudeu a la resta de gossos que es queden a la gàbia a tenir una mica més d'espai vital, fet nolt important dabant l'augment dels abandonaments...</p>-->
+				</div>
+      </div><!-- /.blog-post -->
+
+      <div class="blog-post language-cat">
+        <h2 class="blog-post-title">On Som?</h2>
+				<h4>Mapa, Adreces, Com arrivar-hi, etc.</h4>
+				<p>Estem al Carrer Sofre, s/n - Polígon Industrial Riu Clar (Tarragona). Entra aqui per veure el Mapa i altress dades d'interes...</p>
+      </div><!-- /.blog-post -->
+
+      <div class="blog-post language-cat">
+        <h2 class="blog-post-title">Necessitem Ayuda</h2>
+				<h4>Pots ayudar convertint-te en voluntari, portar-nos menjar i equipaments per el animals</h4>
+				<p>En primer lloc, volem agrair a tots els voluntaris de la Protectora la seva dedicació i esforç per a fer més agradable la vida de tots els animals que tenim a les nostres instal·lacions. Sabem que vosaltres sou el veritable motor de la Protectora...</p>
+      </div><!-- /.blog-post -->
+
+    </div><!-- /.blog-main -->
+
+		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+			<div id="contact-icons" class="sidebar-module sidebar-module-inset language-cat"><article>
+			    <h1>Com contactar?</h1>
+			    <ul class="list-unstyled">
+			      <li><a href="#" rel="external">GoogleMaps</a></li>
+			      <li><a href="#" rel="external">Facebook</a></li>
+			      <li><a href="#" rel="external">eMail</a></li>
+			      <li><a href="#" rel="external">Phone</a></li>
+			      <li><a href="#" rel="external">WhatsApp</a></li>
+			      <li><a href="#" rel="external">Paypal</a></li>
+			      <li><a href="#" rel="external">Bank</a></li>
+			    </ul>
+			</article></div>
+			<div id="links-collection" class="side language-cat"><article>
+			    <h1>Entitats amigues</h1>
+			    <ul class="list-unstyled">
+			      <li><a href="#" rel="external">FAADA http://www.faada.org/</a></li>
+			      <li><a href="#" rel="external">Refugi de Mataro http://www.protectoramataro.org/</a></li>
+			      <li><a href="#" rel="external">Adistramiento Canino Tarragona http://www.adiestramientocaninotarragona.com/</a></li>
+			      <li><a href="#" rel="external">MiMiga http://www.mimiga.es/es/acerca-de/proteccion-animal/</a></li>
+			      <li><a href="#" rel="external">Can Brutus http://www.centros-peluquerias.es/can-brutus/</a></li>
+			      <li><a href="#" rel="external">Servei de Veterinària Coselva</a></li>
+			      <li><a href="#" rel="external">Clínica Veterinària Bofarull Veterinaris</a></li>
+			    </ul></article>
 			</div>
-		</a>
-	</article>
 
-	<article id="secondary-1" class="article language-cat">
-		<a href="article-a.html">
-			<div class="text-box-seconday-1">
-				<header>
-					<h1>On Som?</h1>
-					<h4>Mapa, Adreces, Com arrivar-hi, etc.</h4>
-				</header>
-					<p>Estem al Carrer Sofre, s/n - Polígon Industrial Riu Clar (Tarragona). Entra aqui per veure el Mapa i altress dades d'interes...</p>
+			<div class="sidebar-module">
 			</div>
-		</a>
-	</article>
 
-	<article id="secondary-2" class="article language-cat">
-		<a href="article-b.html">
-			<div class="text-box-seconday-2">
-				<header>
-					<h1>Necessitem Ayuda</h1>
-					<h4>Pots ayudar convertint-te en voluntari, portar-nos menjar i equipaments per el animals</h4>
-				</header>
-					<p>En primer lloc, volem agrair a tots els voluntaris de la Protectora la seva dedicació i esforç per a fer més agradable la vida de tots els animals que tenim a les nostres instal·lacions. Sabem que vosaltres sou el veritable motor de la Protectora... ... ... </p>
-			</div>
-		</a>
-	</article>
+		</div><!-- /.blog-sidebar -->
+
+	</div><!-- /.row -->
+
+</div><!-- /.container -->
 
 
 
 
 
 
-	<aside id="contact-icons" class="side language-cat"><article>
-	    <h1>Com contactar?</h1>
-	    <ul>
-	      <li><a href="#" rel="external">GoogleMaps</a></li>
-	      <li><a href="#" rel="external">Facebook</a></li>
-	      <li><a href="#" rel="external">eMail</a></li>
-	      <li><a href="#" rel="external">Phone</a></li>
-	      <li><a href="#" rel="external">WhatsApp</a></li>
-	      <li><a href="#" rel="external">Paypal</a></li>
-	      <li><a href="#" rel="external">Bank</a></li>
-	    </ul>
-	</article></aside>
-
-	<aside id="links-collection" class="side language-cat"><article>
-	    <h1>Entitats amigues</h1>
-	    <ul>
-	      <li><a href="#" rel="external">FAADA http://www.faada.org/</a></li>
-	      <li><a href="#" rel="external">Refugi de Mataro http://www.protectoramataro.org/</a></li>
-	      <li><a href="#" rel="external">Adistramiento Canino Tarragona http://www.adiestramientocaninotarragona.com/</a></li>
-	      <li><a href="#" rel="external">MiMiga http://www.mimiga.es/es/acerca-de/proteccion-animal/</a></li>
-	      <li><a href="#" rel="external">Can Brutus http://www.centros-peluquerias.es/can-brutus/</a></li>
-	      <li><a href="#" rel="external">Servei de Veterinària Coselva</a></li>
-	      <li><a href="#" rel="external">Clínica Veterinària Bofarull Veterinaris</a></li>
-	    </ul>
-	</article></aside>
 
 
 
 
 
-	<footer id="footer" class="body language-cat">
+
+
+
+
+
+	<footer id="footer" class="blog-footer body language-cat">
 
 		<nav><ul>
 			<li>
 				<a href="index.html">
-					<img src="images/la-protectora-org-tarragona-logo.jpg" alt="Home">Home
+					<img src="images/la-protectora-org-tarragona-logo.png" alt="Home">Home
 				</a></li>
 			<li><a href="#">Adopta!</a></li>
 			<li><a href="#">On som?</a></li>
 			<li><a href="#">Voluntaris</a></li>
 			<li><a href="#">Mascota perduda</a></li>
+			<li><a href="#">Castellano</a></li>
+			<li><a href="#">Català</a></li>
 		</ul></nav>
 		<p>© Associació Protectora d'Animals i plantes de Tarragona 2011</p>
 	</footer>
+
+
+</div>
 
 </body>
 </html>
