@@ -8,7 +8,7 @@ a:visited{
 }
 
 .navbar{
-	font-size: 18px;
+	font-size: 25px;
 	background-color:rgba(255, 255, 255, 0.9);
 }
 
@@ -144,12 +144,36 @@ h5{
 #text-post-3{
 }
 
+#post-4{
+	background-image: url(../images/samarretes.jpg);
+	background-size: 215px;
+}
+
+#text-post-4{
+}
+
+#post-5{
+	background-image: url(../images/la-protectora-qui-som.jpg);
+	background-size: 215px;
+}
+
+#text-post-5{
+}
+
+#post-6{
+	background-image: url(../images/paypal-logo-300x300.png);
+	background-size: 215px;
+}
+
+#text-post-5{
+}
+
+
 
 .blog-sidebar{
 	color: #1c5f15;
 	font-size: 18px;
 }
-
 
 .blog-sidebar a{
 	font-size: 30px;
@@ -160,7 +184,17 @@ h5{
 	margin-right: 10px;
 }
 
+ul {list-style-type: circle;}
 
+
+#footer {
+	background-color: #f5f5f5;
+}
+
+#footer-text{
+	color: #1c5f15;
+	padding: 20px;
+}
 
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
