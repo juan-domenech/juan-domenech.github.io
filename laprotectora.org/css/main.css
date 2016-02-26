@@ -1,5 +1,4 @@
 
-
 a:hover{
 	text-decoration: none;
 }
@@ -12,9 +11,14 @@ a:visited{
 	background-color:rgba(255, 255, 255, 0.9);
 }
 
+#text-logo {
+	font-family: "Bradley Hand", "Comic Sans MS", "Noteworthy";
+	color: #1c5f15;
+	font-size: 30px;
+}
+
 .flag{
 	height: 40px;
-
 }
 
 
@@ -184,17 +188,35 @@ h5{
 	margin-right: 10px;
 }
 
-ul {list-style-type: circle;}
+ul {
+	list-style-type: circle;
+}
 
+.facebook-post{
+ padding: 5px;
+}
 
 #footer {
 	background-color: #f5f5f5;
 }
 
-#footer-text{
+#footer-text {
 	color: #1c5f15;
 	padding: 20px;
 }
+
+
+.expanded-article {
+	color: #1c5f15;
+	font-size: 18px;
+
+}
+
+img.expanded-article {
+	padding: 20px;
+}
+
+
 
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
@@ -203,6 +225,9 @@ ul {list-style-type: circle;}
 		font-size: 0px;
 	}
 	#links-collection{
+		display: none;
+	}
+	.facebook-post{
 		display: none;
 	}
 	.icon{
@@ -223,6 +248,12 @@ ul {list-style-type: circle;}
 	.blog-sidebar a{
 		font-size: 30px;
 	}
+	#links-collection{
+		display: none;
+	}
+	.facebook-post{
+		display: none;
+	}
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
@@ -230,6 +261,9 @@ ul {list-style-type: circle;}
     	font-size: 14px;
   }
 	#links-collection{
+		display: block;
+	}
+	.facebook-post{
 		display: block;
 	}
 	.icon{
@@ -253,6 +287,9 @@ ul {list-style-type: circle;}
 	#links-collection{
 		display: block;
 	}
+	.facebook-post{
+		display: block;
+	}
 	.icon{
 		width: 40px;
 	}
@@ -274,6 +311,9 @@ ul {list-style-type: circle;}
   #links-collection{
 		display: block;
 	}
+	.facebook-post{
+		display: block;
+	}
 	.icon{
 		width: 40px;
 	}
@@ -282,39 +322,3 @@ ul {list-style-type: circle;}
 	}
 }
 
-
-
-
-/*
-#text-box-primary{
-    display: block;
-        bottom: 2em;
-    left: 2em;
-    min-height: 13em;
-    padding: 1.5em 2em 2.25em;
-    position: absolute;
-    width: 15em;
-    background-color: #ad1457;
-    z-index: 2;
-
-    text-indent: 10em;
-
-}
-*/
-/*
-#main-logo {
-	background-image: url(../images/la-protectora-org-tarragona-logo.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-*/
-
-/*
-#castellano-icon{
-	background-image: url(../images/Flag-Icon-Spain.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-*/
