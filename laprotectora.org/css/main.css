@@ -261,7 +261,7 @@ img.expanded-article {
     	font-size: 14px;
   }
 	#links-collection{
-		display: block;
+		display: none;
 	}
 	.facebook-post{
 		display: block;
