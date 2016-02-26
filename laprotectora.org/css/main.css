@@ -11,14 +11,20 @@ a:visited{
 	background-color:rgba(255, 255, 255, 0.9);
 }
 
+.navbar-toggle {
+	margin: 1px;
+}
+
 #text-logo {
 	font-family: "Bradley Hand", "Comic Sans MS", "Noteworthy";
 	color: #1c5f15;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 .flag{
-	height: 40px;
+	height: 30px;
+	padding: 0px;
+	margin: 0px;
 }
 
 
@@ -30,10 +36,10 @@ a:visited{
 }
 
 h1{
-	font-size: 30px;
+	font-size: 25px;
 }
 h2{
-	font-size: 25px;
+	font-size: 18px;
 }
 h3{
 	font-size: 12px;
@@ -49,18 +55,18 @@ h5{
 	background-image: url(../images/adopta-la-protectora-animals-tarragona-2.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 500px;
+	height: 400px;
 }
 
 #primary-text{
 	color:white;
 	background-color: #35b026;
-	margin-left: 30px;
-	margin-right: 30px;
+	margin-left: 15px;
+	margin-right: 160px;
 	padding: 15px;
 	padding-top: 0px;
 	position: absolute;
-	top:30px;
+	top:20px;
 }
 
 #secondary-post{
@@ -74,8 +80,8 @@ h5{
 #secondary-text{
 	color:white;
 	background-color: #35b026;
-	margin-left: 200px; /* responsive */
-	margin-right: 30px;
+	margin-left: 150px; /* responsive */
+	margin-right: 10px;
 	margin-top: 10px;
 	padding: 10px;
 
@@ -96,8 +102,8 @@ h5{
 #terciary-text{
 	color:white;
 	background-color: #35b026;
-	margin-left: 200px; /* responsive */
-	margin-right: 30px;
+	margin-left: 150px; /* responsive */
+	margin-right: 10px;
 	margin-top: 10px;
 	padding: 10px;
 
@@ -110,7 +116,7 @@ h5{
 	color: #1c5f15;
 	background-color: white;
 	background-repeat: no-repeat;
-	height: 120px;
+	height: 80px;
 	overflow:hidden;
 	text-overflow: ellipsis;
 }
@@ -118,7 +124,7 @@ h5{
 .standard-text-post {
 	color: #1c5f15;
 	margin-top: 0px;
-	margin-left: 250px; /* responsive */
+	margin-left: 170px; /* responsive */
 	margin-right: 30px;
 	padding: 0px;
 }
@@ -126,6 +132,7 @@ h5{
 #post-1{
 	background-image: url(../images/abandono-animales-madrid-2.jpg);
 	background-size: contain;
+	height: 80px;
 }
 
 #text-post-1{
@@ -134,7 +141,7 @@ h5{
 
 #post-2{
 	background-image: url(../images/calendari.jpg);
-	background-size: 213px;
+	background-size: 145px;
 }
 
 #text-post-2{
@@ -142,7 +149,7 @@ h5{
 
 #post-3{
 	background-image: url(../images/facebook-logo-long.png);
-	background-size: 220px;
+	background-size: 150px;
 }
 
 #text-post-3{
@@ -150,7 +157,7 @@ h5{
 
 #post-4{
 	background-image: url(../images/samarretes.jpg);
-	background-size: 215px;
+	background-size: 145px;
 }
 
 #text-post-4{
@@ -158,7 +165,7 @@ h5{
 
 #post-5{
 	background-image: url(../images/la-protectora-qui-som.jpg);
-	background-size: 215px;
+	background-size: 145px;
 }
 
 #text-post-5{
@@ -166,7 +173,7 @@ h5{
 
 #post-6{
 	background-image: url(../images/paypal-logo-300x300.png);
-	background-size: 215px;
+	background-size: 145px;
 }
 
 #text-post-5{
@@ -184,7 +191,7 @@ h5{
 }
 
 .icon{
-	width: 40px;
+	width: 10px;
 	margin-right: 10px;
 }
 
@@ -231,10 +238,10 @@ img.expanded-article {
 		display: none;
 	}
 	.icon{
-		width: 80px;
+		width: 50px;
 	}
 	.blog-sidebar a{
-		font-size: 30px;
+		font-size: 25px;
 	}
 }
 /* Extra Small Devices, Phones */
