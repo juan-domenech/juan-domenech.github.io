@@ -4,16 +4,18 @@
 
 Generation #1 seed:
 
-(Click to wath) [![Two puffers animation](seed-two-puffers-opposite-direction.png)]
+(Click to watch) [![Two puffers animation](seed-two-puffers-opposite-direction.png)]
 (https://juan-domenech.github.io/sandbox/python/game-of-life/two-puffers-opposite-direction-1150generations.html)
 
+Animation:
 https://juan-domenech.github.io/sandbox/python/game-of-life/two-puffers-opposite-direction-1150generations.html
 
 ### Seed "Rabbits" animated with color palette (3000 Generations)
 
-Animation: [![Rabbits animation](seed-rabbits-3000-generations.png)]
+(Click to watch) [![Rabbits animation](seed-rabbits-3000-generations.png)]
 (http://juan-domenech.github.io/sandbox/python/game-of-life/rabbits-3000-generations.html)
 
+Animation:
 http://juan-domenech.github.io/sandbox/python/game-of-life/rabbits-3000-generations.html
 
 
