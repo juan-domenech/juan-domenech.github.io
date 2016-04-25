@@ -3,9 +3,10 @@
 ### Two puffers in opposite direction (1150 Generations)
 
 Generation #1 seed:
-![Seed](seed-two-puffers-opposite-direction.png)
 
-Animation
+(Click to wath) [![Two puffers animation](seed-two-puffers-opposite-direction.png)]
+(https://juan-domenech.github.io/sandbox/python/game-of-life/two-puffers-opposite-direction-1150generations.html)
+
 https://juan-domenech.github.io/sandbox/python/game-of-life/two-puffers-opposite-direction-1150generations.html
 
 ### Seed "Rabbits" animated with color palette (3000 Generations)
